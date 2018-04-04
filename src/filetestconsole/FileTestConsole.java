@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Ariel
+ * @author Navs
  */
 public class FileTestConsole {
 
@@ -53,14 +53,9 @@ public class FileTestConsole {
         }
 
         String origen;
-        //origen = (new File("")).getAbsolutePath();
         origen = "G:\\pkg";
-        //origen = "\\\\carlos-pc\\Bandec\\";
-        //origen = "E:\\Nueva carpeta\\";
         String destiny;
         destiny = "G:\\Nueva carpeta\\";
-        //destiny = "H:\\pkg";
-        //File f = new File(origen);
         System.out.println(f.getAbsolutePath());
         
         
@@ -81,31 +76,7 @@ public class FileTestConsole {
             for(File file : copyList){
                 System.out.println("a copiar: " + file.getPath() + "\n --> to " + destiny );
                 fm.copyfile(file.getPath(), destiny + file.getName());// para copiarlo todo en la misma carpeta
-                /*
-                //Conservando toda la estructura de carpetas donde se encuentre el File o directorio
-                realDestiny = destiny + file.getPath().substring(l+1) + file.getName();
-                System.out.println("real Destiny: " + realDestiny);
-                fm.copyfile(file.getPath(), realDestiny);
-                */
             }
         }
-        
-        /*
-        String fName;
-        for (File file : fl) {
-            fName = file.getName();
-            if(fName.contains("! Especial De CrazY_BoyZ")){
-                System.out.println(fName);
-                origen = file.getPath();
-                String destiny2 = destiny + file.getName();
-                System.out.println("origin: "+ origen);
-                System.out.println("destiny: "+ destiny2);
-                fm.copyfile(origen, destiny2);
-            }
-        }
-        */
-        String location = f.getAbsolutePath();
-        String photoLocation = "E:\\work\\fotos";
     }
-    
 }
